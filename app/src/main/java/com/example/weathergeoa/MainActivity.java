@@ -1,6 +1,7 @@
 package com.example.weathergeoa;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().setStatusBarColor(ContextCompat.getColor(MainActivity.this, androidx.cardview.R.color.cardview_shadow_start_color));
         etCity = findViewById(R.id.etCity);
         etCountry = findViewById(R.id.etCountry);
         tvResult = findViewById(R.id.tvResult);
@@ -76,11 +78,11 @@ public class MainActivity extends AppCompatActivity {
                         String countryName = jsonObjectSys.getString("country");
                         String cityName = jsonResponse.getString("name");
                         tvResult.setTextColor(Color.rgb(68, 134, 199));
-                        output += "Trenutno vreme u " + cityName + " (" + countryName + ")"
+                        output += " Grad -  " + cityName + " (" + countryName + ")"
                                 + "\n Temperatura: " + df.format(temp) + " °C"
                                 + "\n Subjektivni osećaj: " + df.format(feelsLike) + " °C"
                                 + "\n Vlažnost vazduha: " + humidity + "%"
-                                + "\n Opis: " + description
+                                + "\n Trenutno je: " + description
                                 + "\n Brzina Vetra: " + wind + "m/s (meters per second)"
                                 + "\n Oblačnost: " + clouds + "%"
                                 + "\n Pritisak: " + pressure + " hPa";
