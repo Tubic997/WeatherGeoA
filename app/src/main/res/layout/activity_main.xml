@@ -5,19 +5,19 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".MainActivity"
-    android:background="@drawable/background1"
+    android:background="@drawable/background2"
     android:orientation="vertical"
     android:padding="25dp">
 
     <TextView
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="160dp"
         android:layout_gravity="center"
+        android:padding="10dp"
         android:text="Weather GeoA"
-        android:textStyle="bold"
-        android:textColor="@android:color/white"
+        android:textColor="#1d6e8b"
         android:textSize="50sp"
-        android:padding="10dp"/>
+        android:textStyle="bold" />
 
 
     <LinearLayout
@@ -34,6 +34,7 @@
             android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="Unesi ime grada"
+            android:drawableStart="@drawable/ic_baseline_location_city_24"
             android:inputType="textPersonName"/>
         <EditText
             android:layout_width="match_parent"
@@ -42,13 +43,14 @@
             android:layout_marginBottom="10dp"
             android:ems="10"
             android:hint="Enter Country Code (Optional)"
+            android:drawableStart="@drawable/ic_baseline_domain_verification_24"
             android:inputType="textPersonName" />
 
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/btnGet"
-            android:background="#6DD747"
+            android:background="#1d6e8b"
             android:textColor="@android:color/white"
             android:onClick="getWeatherDetails"
             android:text="Get"/>
