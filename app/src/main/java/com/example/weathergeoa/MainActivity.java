@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                                 + "\n Subjektivni osećaj: " + df.format(feelsLike) + " °C"
                                 + "\n Vlažnost vazduha: " + humidity + "%"
                                 + "\n Trenutno je: " + description
-                                + "\n Brzina Vetra: " + wind + "m/s (meters per second)"
+                                + "\n Brzina Vetra: " + wind + "m/s"
                                 + "\n Oblačnost: " + clouds + "%"
                                 + "\n Pritisak: " + pressure + " hPa";
                         tvResult.setText(output);

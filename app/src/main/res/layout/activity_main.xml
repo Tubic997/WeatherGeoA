@@ -44,7 +44,7 @@
             android:layout_marginBottom="10dp"
             android:drawableStart="@drawable/ic_baseline_domain_verification_24"
             android:ems="10"
-            android:hint="Country Code"
+            android:hint="Pozivni Broj"
             android:inputType="textPersonName" />
 
         <Button
@@ -53,7 +53,7 @@
             android:layout_height="wrap_content"
             android:background="#1d6e8b"
             android:onClick="getWeatherDetails"
-            android:text="Get"
+            android:text="Pretraži"
             android:textColor="@android:color/white" />
 
         <ScrollView
