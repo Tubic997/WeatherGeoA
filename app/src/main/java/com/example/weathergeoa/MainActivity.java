@@ -7,6 +7,7 @@ import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -97,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
             }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    Toast.makeText(getApplicationContext(), error.toString().trim(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Molimo ukucajte tačan naziv grada.", Toast.LENGTH_SHORT).show();
                 }
             });
             RequestQueue requestQueue = Volley.newRequestQueue(getApplicationContext());
